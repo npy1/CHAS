@@ -1,0 +1,335 @@
+/* Fuente UltraLight */
+@font-face {
+    font-family: 'Qanelas';
+    src: url('fonts/UltraLight/Qanelas-UltraLight.woff2') format('woff2'),
+         url('fonts/UltraLight/Qanelas-UltraLight.woff') format('woff'),
+         url('fonts/UltraLight/Qanelas-UltraLight.ttf') format('truetype'),
+         url('fonts/UltraLight/Qanelas-UltraLight.eot');
+    font-weight: 200; /* UltraLight */
+    font-style: normal;
+}
+
+/* Fuente UltraLight Italic */
+@font-face {
+    font-family: 'Qanelas';
+    src: url('fonts/UltraLight/Qanelas-UltraLightItalic.woff2') format('woff2'),
+         url('fonts/UltraLight/Qanelas-UltraLightItalic.woff') format('woff'),
+         url('fonts/UltraLight/Qanelas-UltraLightItalic.ttf') format('truetype'),
+         url('fonts/UltraLight/Qanelas-UltraLightItalic.eot');
+    font-weight: 200; /* UltraLight */
+    font-style: italic;
+}
+
+/* Fuente Thin */
+@font-face {
+    font-family: 'Qanelas';
+    src: url('fonts/Thin/Qanelas-Thin.woff2') format('woff2'),
+         url('fonts/Thin/Qanelas-Thin.woff') format('woff'),
+         url('fonts/Thin/Qanelas-Thin.ttf') format('truetype'),
+         url('fonts/Thin/Qanelas-Thin.eot');
+    font-weight: 300; /* Thin */
+    font-style: normal;
+}
+
+/* Fuente Thin Italic */
+@font-face {
+    font-family: 'Qanelas';
+    src: url('fonts/Thin/Qanelas-ThinItalic.woff2') format('woff2'),
+         url('fonts/Thin/Qanelas-ThinItalic.woff') format('woff'),
+         url('fonts/Thin/Qanelas-ThinItalic.ttf') format('truetype'),
+         url('fonts/Thin/Qanelas-ThinItalic.eot');
+    font-weight: 300; /* Thin */
+    font-style: italic;
+}
+
+/* Fuente Light */
+@font-face {
+    font-family: 'Qanelas';
+    src: url('fonts/Light/Qanelas-Light.woff2') format('woff2'),
+         url('fonts/Light/Qanelas-Light.woff') format('woff'),
+         url('fonts/Light/Qanelas-Light.ttf') format('truetype'),
+         url('fonts/Light/Qanelas-Light.eot');
+    font-weight: 400; /* Light */
+    font-style: normal;
+}
+
+/* Fuente Light Italic */
+@font-face {
+    font-family: 'Qanelas';
+    src: url('fonts/Light/Qanelas-LightItalic.woff2') format('woff2'),
+         url('fonts/Light/Qanelas-LightItalic.woff') format('woff'),
+         url('fonts/Light/Qanelas-LightItalic.ttf') format('truetype'),
+         url('fonts/Light/Qanelas-LightItalic.eot');
+    font-weight: 400; /* Light */
+    font-style: italic;
+}
+
+/* Fuente Regular */
+@font-face {
+    font-family: 'Qanelas';
+    src: url('fonts/Regular/Qanelas-Regular.woff2') format('woff2'),
+         url('fonts/Regular/Qanelas-Regular.woff') format('woff'),
+         url('fonts/Regular/Qanelas-Regular.ttf') format('truetype'),
+         url('fonts/Regular/Qanelas-Regular.eot');
+    font-weight: 500; /* Regular */
+    font-style: normal;
+}
+
+/* Fuente Regular Italic */
+@font-face {
+    font-family: 'Qanelas';
+    src: url('fonts/Regular/Qanelas-RegularItalic.woff2') format('woff2'),
+         url('fonts/Regular/Qanelas-RegularItalic.woff') format('woff'),
+         url('fonts/Regular/Qanelas-RegularItalic.ttf') format('truetype'),
+         url('fonts/Regular/Qanelas-RegularItalic.eot');
+    font-weight: 500; /* Regular */
+    font-style: italic;
+}
+
+/* Fuente Medium */
+@font-face {
+    font-family: 'Qanelas';
+    src: url('fonts/Medium/Qanelas-Medium.woff2') format('woff2'),
+         url('fonts/Medium/Qanelas-Medium.woff') format('woff'),
+         url('fonts/Medium/Qanelas-Medium.ttf') format('truetype'),
+         url('fonts/Medium/Qanelas-Medium.eot');
+    font-weight: 600; /* Medium */
+    font-style: normal;
+}
+
+/* Fuente Medium Italic */
+@font-face {
+    font-family: 'Qanelas';
+    src: url('fonts/Medium/Qanelas-MediumItalic.woff2') format('woff2'),
+         url('fonts/Medium/Qanelas-MediumItalic.woff') format('woff'),
+         url('fonts/Medium/Qanelas-MediumItalic.ttf') format('truetype'),
+         url('fonts/Medium/Qanelas-MediumItalic.eot');
+    font-weight: 600; /* Medium */
+    font-style: italic;
+}
+
+/* Fuente SemiBold */
+@font-face {
+    font-family: 'Qanelas';
+    src: url('fonts/SemiBold/Qanelas-SemiBold.woff2') format('woff2'),
+         url('fonts/SemiBold/Qanelas-SemiBold.woff') format('woff'),
+         url('fonts/SemiBold/Qanelas-SemiBold.ttf') format('truetype'),
+         url('fonts/SemiBold/Qanelas-SemiBold.eot');
+    font-weight: 700; /* SemiBold */
+    font-style: normal;
+}
+
+/* Fuente SemiBold Italic */
+@font-face {
+    font-family: 'Qanelas';
+    src: url('fonts/SemiBold/Qanelas-SemiBoldItalic.woff2') format('woff2'),
+         url('fonts/SemiBold/Qanelas-SemiBoldItalic.woff') format('woff'),
+         url('fonts/SemiBold/Qanelas-SemiBoldItalic.ttf') format('truetype'),
+         url('fonts/SemiBold/Qanelas-SemiBoldItalic.eot');
+    font-weight: 700; /* SemiBold */
+    font-style: italic;
+}
+
+/* Fuente Bold */
+@font-face {
+    font-family: 'Qanelas';
+    src: url('fonts/Bold/Qanelas-Bold.woff2') format('woff2'),
+         url('fonts/Bold/Qanelas-Bold.woff') format('woff'),
+         url('fonts/Bold/Qanelas-Bold.ttf') format('truetype'),
+         url('fonts/Bold/Qanelas-Bold.eot');
+    font-weight: 800; /* Bold */
+    font-style: normal;
+}
+
+/* Fuente Bold Italic */
+@font-face {
+    font-family: 'Qanelas';
+    src: url('fonts/Bold/Qanelas-BoldItalic.woff2') format('woff2'),
+         url('fonts/Bold/Qanelas-BoldItalic.woff') format('woff'),
+         url('fonts/Bold/Qanelas-BoldItalic.ttf') format('truetype'),
+         url('fonts/Bold/Qanelas-BoldItalic.eot');
+    font-weight: 800; /* Bold */
+    font-style: italic;
+}
+
+/* Fuente ExtraBold */
+@font-face {
+    font-family: 'Qanelas';
+    src: url('fonts/ExtraBold/Qanelas-ExtraBold.woff2') format('woff2'),
+         url('fonts/ExtraBold/Qanelas-ExtraBold.woff') format('woff'),
+         url('fonts/ExtraBold/Qanelas-ExtraBold.ttf') format('truetype'),
+         url('fonts/ExtraBold/Qanelas-ExtraBold.eot');
+    font-weight: 900; /* ExtraBold */
+    font-style: normal;
+}
+
+/* Fuente ExtraBold Italic */
+@font-face {
+    font-family: 'Qanelas';
+    src: url('fonts/ExtraBold/Qanelas-ExtraBoldItalic.woff2') format('woff2'),
+         url('fonts/ExtraBold/Qanelas-ExtraBoldItalic.woff') format('woff'),
+         url('fonts/ExtraBold/Qanelas-ExtraBoldItalic.ttf') format('truetype'),
+         url('fonts/ExtraBold/Qanelas-ExtraBoldItalic.eot');
+    font-weight: 900; /* ExtraBold */
+    font-style: italic;
+}
+
+/* Fuente Black */
+@font-face {
+    font-family: 'Qanelas';
+    src: url('fonts/Black/Qanelas-Black.woff2') format('woff2'),
+         url('fonts/Black/Qanelas-Black.woff') format('woff'),
+         url('fonts/Black/Qanelas-Black.ttf') format('truetype'),
+         url('fonts/Black/Qanelas-Black.eot');
+    font-weight: 1000; /* Black */
+    font-style: normal;
+}
+
+/* Fuente Black Italic */
+@font-face {
+    font-family: 'Qanelas';
+    src: url('fonts/Black/Qanelas-BlackItalic.woff2') format('woff2'),
+         url('fonts/Black/Qanelas-BlackItalic.woff') format('woff'),
+         url('fonts/Black/Qanelas-BlackItalic.ttf') format('truetype'),
+         url('fonts/Black/Qanelas-BlackItalic.eot');
+    font-weight: 1000; /* Black */
+    font-style: italic;
+}
+
+:root {
+    --header-bg-color: #000; /* Color predeterminado: negro */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+    background-color: #3A3A3A;
+    margin: 0;
+    font-family: 'Qanelas', sans-serif;
+}
+
+/* Contenedor principal que incluye la etiqueta y las opciones */
+.main-container {
+    display: flex;
+    gap: 20px; /* Espacio entre la etiqueta y las opciones */
+}
+
+/* Estilos del contenedor de la etiqueta */
+.etiqueta-container {
+    background-color: white;
+    width: 90mm;
+    height: 100mm;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+/* Estilos para el encabezado de la etiqueta */
+.header {
+    background-color: var(--header-bg-color);
+    padding: 5px;
+    text-align: center;
+}
+
+.header-text {
+    color: #FFF;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Estilos del contenido de la etiqueta */
+.content {
+    flex-grow: 1;
+    font-size: 13px;
+    line-height: 1.3;
+    margin-left: 15px;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.content p {
+    margin: 3px 0;
+}
+
+.content p strong {
+    font-weight: bold;
+    color: #333;
+    font-size: 15px;
+}
+
+
+
+/* Estilos para el cuadro de opciones */
+.options-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    background-color: #444;
+    color: #FFF;
+    border-radius: 8px;
+    width: 150px;
+}
+
+.color-picker {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0px;
+    color: #FFF;
+}
+
+
+#imagenOpcional {
+    position:relative;
+    top: -369px; /* Ajusta la distancia desde la parte superior */
+    right: -5px; /* Ajusta la distancia desde el lado derecho */
+    width: 80px; /* Tamaño de la imagen */
+    margin: 0;
+
+}
+
+/* Estilo para el contenedor del código QR */
+.qr-code {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el QR en su contenedor */
+    align-items: center; /* Centra verticalmente el QR en su contenedor */
+    margin-top: 10px; /* Espacio superior para separar del contenido */
+    padding: 10px; /* Espacio alrededor del QR */
+    max-width: 120px; /* Limita el tamaño del contenedor */
+    margin-left: auto; /* Centra el contenedor en el eje horizontal */
+    margin-right: auto; /* Centra el contenedor en el eje horizontal */
+}
+
+/* Estilo para la imagen del código QR */
+.qr-code img {
+    max-width: 120%; /* Asegura que el QR se ajuste al contenedor */
+    height: auto; /* Mantiene la proporción del QR */
+
+}
+
+/* Estilos generales para todos los botones */
+button, .back-button {
+    display: block; /* Alinea los botones en bloque para que se apilen uno sobre otro */
+    width: 100%; /* Hace que el botón ocupe el ancho completo del contenedor */
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .back-button:hover {
+    background-color: #999999; /* Color de fondo al pasar el cursor */
+}

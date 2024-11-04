@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>CHAS</h1>
+        <form id="chasForm" action="etiqueta.html" method="GET">
+            <label for="titulo">Título de la Etiqueta:</label>
+            <input type="text" id="titulo" name="titulo" required placeholder="Ingrese el título de la etiqueta">
+
+            <label for="producto">Producto:</label>
+            <input type="text" id="producto" name="producto" required>
+
+            <label for="chas">Número de CHAS:</label>
+            <input type="text" id="chas" name="chas" required>
+
+            <label for="parte">Número de Parte:</label>
+            <input type="text" id="parte" name="parte" required>
+
+            <label for="modelo">Modelo:</label>
+            <input type="text" id="modelo" name="modelo" required>
+
+            <label for="razonSocial">Razón Social:</label>
+            <input type="text" id="razonSocial" name="razonSocial" required>
+
+            <label for="cuit">Cuit:</label>
+            <input type="text" id="cuit" name="cuit" required>
+
+            <label for="licencia1">Licencia:</label>
+            <input type="text" id="licencia1" name="licencia1" required>
+
+            <label for="qrContent">Contenido del QR:</label>
+            <input type="text" id="qrContent" name="qrContent" required placeholder="Ingrese el contenido del QR">
+
+            <label>
+                <input type="checkbox" id="mostrarImagen" name="mostrarImagen" value="true">
+                Mostrar Imagen
+            </label>
+
+            <button type="submit" class="generate-button">GENERAR</button>
+        </form>
+    </div>
+    <script src="script.js"></script> <!-- Si necesitas lógica para el formulario -->
+</body>
+</html>

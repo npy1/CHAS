@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiqueta</title>
+    <link rel="stylesheet" href="etiqueta.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <!-- Contenedor de la etiqueta completa -->
+        <div class="etiqueta-container" id="etiqueta">
+            <!-- Título de la etiqueta -->
+            <div class="header">
+                <p class="header-text" id="tituloEtiqueta">195/65R16 91H XL M+S</p>
+            </div>
+            <div class="content">
+                <p><strong>Producto:</strong> <span id="producto"></span></p>
+                <p><strong>Número de CHAS:</strong> <span id="chas"></span></p>
+                <p><strong>Número de Parte:</strong> <span id="parte"></span></p>
+                <p><strong>Modelo:</strong> <span id="modelo"></span></p>
+                <p><strong>Razón Social:</strong> <span id="razonSocial"></span></p>
+                <p><strong>Cuit:</strong> <span id="cuit"></span></p>
+                <p><strong>Licencia:</strong> <span id="licencia1"></span></p>
+            </div>
+            <div class="qr-code">
+                <img id="qrCode" src="" alt="Código QR">
+            </div>
+
+            <!-- Imagen opcional que solo se muestra si el checkbox estaba marcado -->
+            <div id="imagenOpcional" style="display: none;">
+                <img src="fonts/xbr.svg" alt="Imagen Opcional">
+            </div>
+        </div>
+
+        <!-- Cuadro de opciones -->
+        <div class="options-container">
+            <div class="color-picker">
+                <label for="headerColor">Color del encabezado:</label>
+                <input type="color" id="headerColor" name="headerColor" value="#000000">
+            </div>
+            <button onclick="downloadPDF()">Descargar en PDF</button>
+            
+        </div>
+    </div>
+    
+    <!-- Enlace al archivo JavaScript externo -->
+    <script src="etiqueta.js"></script>
+</body>
+</html>
