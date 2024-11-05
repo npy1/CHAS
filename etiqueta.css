@@ -287,7 +287,7 @@ body {
 
 #imagenOpcional {
     position:relative;
-    top: -370px; /* Ajusta la distancia desde la parte superior */
+    top: -371px; /* Ajusta la distancia desde la parte superior */
     right: -5px; /* Ajusta la distancia desde el lado derecho */
     width: 80px; /* Tamaño de la imagen */
     margin: 0;
