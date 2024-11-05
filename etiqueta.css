@@ -294,6 +294,7 @@ body {
 
 }
 
+
 /* Estilo para el contenedor del código QR */
 .qr-code {
     display: flex;
@@ -314,10 +315,10 @@ body {
 }
 
 /* Estilos generales para todos los botones */
-button, .back-button {
-    display: block; /* Alinea los botones en bloque para que se apilen uno sobre otro */
-    width: 100%; /* Hace que el botón ocupe el ancho completo del contenedor */
-    margin-top: 20px;
+button {
+    display: block;
+    width: 100%; /* Hace que ambos botones ocupen el ancho completo del contenedor */
+    margin-top: 10px; /* Espacio entre botones */
     padding: 10px 20px;
     font-size: 16px;
     color: #000000;
@@ -328,8 +329,14 @@ button, .back-button {
     text-align: center;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera para un aspecto uniforme */
 }
 
-button:hover, .back-button:hover {
-    background-color: #999999; /* Color de fondo al pasar el cursor */
+button:hover {
+    background-color: #e0e0e0; /* Color al pasar el cursor */
+}
+
+button:focus {
+    outline: none;
+    background-color: #d0d0d0; /* Color al hacer clic */
 }
