@@ -14,8 +14,8 @@ document.getElementById('razonSocial').textContent = getParameterByName('razonSo
 document.getElementById('cuit').textContent = getParameterByName('cuit') || '30-71593752-9';
 document.getElementById('licencia1').textContent = getParameterByName('licencia1') || 'E4*30R02/22*81949*01';
 
-// Generar el código QR con los datos
-const qrData = `${getParameterByName('producto')} - ${getParameterByName('chas')}`;
+// Generar el código QR con el enlace personalizado
+const qrData = getParameterByName('qrContent') || `${getParameterByName('producto')} - ${getParameterByName('chas')}`;
 const qrCodeImg = document.getElementById('qrCode');
 qrCodeImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(qrData)}`;
 
@@ -62,7 +62,7 @@ async function downloadPDF() {
     // Obtener el título de la etiqueta y el modelo para el nombre del archivo
     const titulo = document.getElementById('tituloEtiqueta').textContent.trim();
     const modelo = document.getElementById('modelo').textContent.trim();
-    const nombreArchivo = `${titulo}_${modelo}.pdf`.replace(/[^\w\s]/gi, '').replace(/\s+/g, '_'); // Limpiar caracteres especiales y espacios
+    const nombreArchivo = `${titulo}_${modelo}.pdf`.replace(/[^\w\s]/gi, '').replace(/\s+/g, '_');
 
     colorPicker.style.display = "none"; // Ocultar selector de color temporalmente
 
@@ -76,34 +76,32 @@ async function downloadPDF() {
 // Función para generar el PDF usando html2canvas y jsPDF
 function generatePDF(etiqueta, colorPicker, nombreArchivo) {
     setTimeout(() => {
-        // Ajustes de html2canvas para mejor calidad en la captura
         html2canvas(etiqueta, { 
-            scale: 4, // Aumenta la escala para mejorar la resolución
+            scale: 4, 
             useCORS: true, 
             allowTaint: true,
-            backgroundColor: null // Sin fondo adicional para capturar sólo el contenido
+            backgroundColor: null 
         }).then(canvas => {
             const imgData = canvas.toDataURL("image/png");
 
-            // Configuración del tamaño exacto del PDF en mm convertido a puntos (90x100 mm -> 255x283 puntos)
             const pdfWidth = 255;
             const pdfHeight = 283;
 
             const { jsPDF } = window.jspdf;
             const pdf = new jsPDF({
                 orientation: "portrait",
-                unit: "pt", // Usamos puntos para mejor control
-                format: [pdfWidth, pdfHeight] // Tamaño fijo de 90x100 mm en puntos
+                unit: "pt",
+                format: [pdfWidth, pdfHeight]
             });
 
-            pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight); // Añade la imagen ajustada al PDF
-            pdf.save(nombreArchivo); // Usa el nombre personalizado para el archivo
+            pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+            pdf.save(nombreArchivo);
 
-            colorPicker.style.display = "flex"; // Restaurar el selector de color
+            colorPicker.style.display = "flex";
         }).catch(error => console.error("Error al generar el PDF:", error));
     }, 500);
 }
 
 function volverAlInicio() {
-    window.location.href = "index.html"; // Redirige a la página de inicio
+    window.location.href = "index.html";
 }
