@@ -77,15 +77,23 @@ async function downloadPDF() {
 function generatePDF(etiqueta, colorPicker, nombreArchivo) {
     setTimeout(() => {
         html2canvas(etiqueta, { 
-            scale: 4, 
-            useCORS: true, 
+            scale: 4,
+            useCORS: true,
             allowTaint: true,
             backgroundColor: null 
         }).then(canvas => {
-            const imgData = canvas.toDataURL("image/png");
+            const croppedCanvas = document.createElement('canvas');
+            const cropWidth = canvas.width;
+            const cropHeight = canvas.height;
+            croppedCanvas.width = cropWidth;
+            croppedCanvas.height = cropHeight;
+            const ctx = croppedCanvas.getContext('2d');
+            ctx.drawImage(canvas, 0, 0, cropWidth, cropHeight);
 
-            const pdfWidth = 255;
-            const pdfHeight = 283;
+            const imgData = croppedCanvas.toDataURL("image/jpeg", 0.95);
+
+            const pdfWidth = 90 * 2.83465; // 90 mm
+            const pdfHeight = 100 * 2.83465; // 100 mm
 
             const { jsPDF } = window.jspdf;
             const pdf = new jsPDF({
@@ -94,13 +102,19 @@ function generatePDF(etiqueta, colorPicker, nombreArchivo) {
                 format: [pdfWidth, pdfHeight]
             });
 
-            pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+            // Fondo blanco para evitar líneas no deseadas
+            pdf.setFillColor(255, 255, 255);
+            pdf.rect(0, 0, pdfWidth, pdfHeight, 'F');
+
+            pdf.addImage(imgData, 'JPEG', 0, 0, pdfWidth, pdfHeight, undefined, 'SLOW');
             pdf.save(nombreArchivo);
 
             colorPicker.style.display = "flex";
         }).catch(error => console.error("Error al generar el PDF:", error));
     }, 500);
 }
+
+
 
 function volverAlInicio() {
     window.location.href = "index.html";
