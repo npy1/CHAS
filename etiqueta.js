@@ -49,10 +49,26 @@ if (mostrarImagen === 'true') {
     document.getElementById('imagenOpcional').style.display = 'block';
 }
 
-// Cambiar color del encabezado dinámicamente
+// Cambiar color del encabezado dinámicamente y guardar en localStorage
 document.getElementById('headerColor').addEventListener('input', (event) => {
-    document.documentElement.style.setProperty('--header-bg-color', event.target.value);
+    const color = event.target.value;
+    document.documentElement.style.setProperty('--header-bg-color', color);
+
+    // Guardar el color en localStorage
+    localStorage.setItem('headerColor', color);
 });
+
+// Recuperar y aplicar el color almacenado al cargar la página
+window.addEventListener('DOMContentLoaded', () => {
+    const savedColor = localStorage.getItem('headerColor');
+
+    // Si hay un color almacenado, aplícalo al encabezado
+    if (savedColor) {
+        document.documentElement.style.setProperty('--header-bg-color', savedColor);
+        document.getElementById('headerColor').value = savedColor; // Actualiza el valor del input
+    }
+});
+
 
 // Descargar como PDF
 async function downloadPDF() {
@@ -63,8 +79,6 @@ async function downloadPDF() {
     const titulo = document.getElementById('tituloEtiqueta').textContent.trim();
     const modelo = document.getElementById('modelo').textContent.trim();
     const nombreArchivo = `${titulo}_${modelo}.pdf`.replace(/[^\w\s]/gi, '').replace(/\s+/g, '_');
-
-    colorPicker.style.display = "none"; // Ocultar selector de color temporalmente
 
     // Esperar a que todas las imágenes necesarias estén cargadas
     await waitForImagesToLoad();
