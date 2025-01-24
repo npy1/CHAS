@@ -69,16 +69,29 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Cambiar color del título entre negro y blanco
+// Cambiar color del título entre negro y blanco y guardar en localStorage
 document.getElementById('toggleTitleColor').addEventListener('click', () => {
     const tituloEtiqueta = document.getElementById('tituloEtiqueta');
     const currentColor = window.getComputedStyle(tituloEtiqueta).color;
+
     if (currentColor === 'rgb(0, 0, 0)') {
         tituloEtiqueta.style.color = 'white';
+        localStorage.setItem('tituloColor', 'white'); // Guardar el color blanco
     } else {
         tituloEtiqueta.style.color = 'black';
+        localStorage.setItem('tituloColor', 'black'); // Guardar el color negro
     }
 });
+
+// Aplicar el color almacenado al cargar la página
+window.addEventListener('DOMContentLoaded', () => {
+    const savedTitleColor = localStorage.getItem('tituloColor');
+
+    if (savedTitleColor) {
+        document.getElementById('tituloEtiqueta').style.color = savedTitleColor;
+    }
+});
+
 
 // Descargar como PDF
 async function downloadPDF() {
