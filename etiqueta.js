@@ -69,6 +69,16 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// Cambiar color del título entre negro y blanco
+document.getElementById('toggleTitleColor').addEventListener('click', () => {
+    const tituloEtiqueta = document.getElementById('tituloEtiqueta');
+    const currentColor = window.getComputedStyle(tituloEtiqueta).color;
+    if (currentColor === 'rgb(0, 0, 0)') {
+        tituloEtiqueta.style.color = 'white';
+    } else {
+        tituloEtiqueta.style.color = 'black';
+    }
+});
 
 // Descargar como PDF
 async function downloadPDF() {
@@ -78,7 +88,7 @@ async function downloadPDF() {
     // Obtener el título de la etiqueta y el modelo para el nombre del archivo
     const titulo = document.getElementById('tituloEtiqueta').textContent.trim();
     const modelo = document.getElementById('modelo').textContent.trim();
-    const nombreArchivo = `${titulo}_${modelo}.pdf`.replace(/[^\w\s]/gi, '').replace(/\s+/g, '_');
+    const nombreArchivo = `${titulo}_${modelo}`.replace(/[^\w\s]/gi, '').replace(/\s+/g, '_');
 
     // Esperar a que todas las imágenes necesarias estén cargadas
     await waitForImagesToLoad();
@@ -127,8 +137,6 @@ function generatePDF(etiqueta, colorPicker, nombreArchivo) {
         }).catch(error => console.error("Error al generar el PDF:", error));
     }, 500);
 }
-
-
 
 function volverAlInicio() {
     window.location.href = "index.html";
