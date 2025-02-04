@@ -105,7 +105,7 @@ const modelo = document.getElementById('modelo').textContent.trim();
 // Reemplazar caracteres no válidos para nombres de archivos
 const nombreArchivo = `${titulo}_${modelo}`
     .replace(/[\/\\:*?"<>|]/g, '_')  // Reemplaza caracteres no permitidos
-    .replace(/\s+/g, '_'); // Reemplaza espacios múltiples con guion bajo
+    .replace(/\s+/g, '_') + ".pdf"; // Reemplaza espacios múltiples con guion bajo
 
 console.log(nombreArchivo);
 
