@@ -98,10 +98,16 @@ async function downloadPDF() {
     const etiqueta = document.getElementById("etiqueta");
     const colorPicker = document.querySelector(".color-picker");
 
-    // Obtener el título de la etiqueta y el modelo para el nombre del archivo
-    const titulo = document.getElementById('tituloEtiqueta').textContent.trim();
-    const modelo = document.getElementById('modelo').textContent.trim();
-    const nombreArchivo = `${titulo}_${modelo}`.replace(/[^\w\s]/gi, '').replace(/\s+/g, '_');
+   // Obtener el título de la etiqueta y el modelo para el nombre del archivo
+const titulo = document.getElementById('tituloEtiqueta').textContent.trim();
+const modelo = document.getElementById('modelo').textContent.trim();
+
+// Reemplazar caracteres no válidos para nombres de archivos
+const nombreArchivo = `${titulo}_${modelo}`
+    .replace(/[\/\\:*?"<>|]/g, '_')  // Reemplaza caracteres no permitidos
+    .replace(/\s+/g, '_'); // Reemplaza espacios múltiples con guion bajo
+
+console.log(nombreArchivo);
 
     // Esperar a que todas las imágenes necesarias estén cargadas
     await waitForImagesToLoad();
